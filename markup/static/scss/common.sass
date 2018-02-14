@@ -1,0 +1,277 @@
+// Common styles of the project
+
+// Common styles of the project
+
+html
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #fff
+
+html, body
+	height: 100%
+
+body
+	color: #333
+	+lr
+
+.page__vs
+	width: 100%
+	max-width: 740px
+	padding: 1px 20px
+	margin: 40px auto
+	color: #333
+	box-sizing: border-box
+
+
+* html .page__wrapper
+	height: 100%
+
+a
+	text-decoration: none
+	outline: none
+
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+
+b, strong
+	font-weight: normal
+
+p
+	margin: 0
+ul,
+ol
+	margin: 0
+	padding: 0
+	list-style: none
+
+.box
+	&_30
+		margin-bottom: 30px
+	&_40
+		margin-bottom: 40px
+	&_80
+		margin-bottom: 80px
+
+.title
+	&__main
+		font-size: 26px
+		line-height: .9
+		margin-bottom: 1em
+		color: #333
+		+lm
+	&__section
+		font-size: 18px
+		line-height: 1.33
+		color: #333
+		margin-bottom: .8em
+		+lm
+
+.desc
+	&__n
+		font-size: 16px
+		line-height: 1.5
+		color: #333
+		+ll
+		&.mod_r
+			+lr
+	&__m
+		font-size: 16px
+		line-height: 1.5
+		color: #333
+		+lm
+
+.marked
+	background-color: #525CA3
+	padding: 20px 10px
+	p
+		color: #fff
+		+lr
+
+.example
+	border: 1px solid #D9D9D9
+	border-right: 4px solid #CFC2DD
+	background-color: #fff
+	padding: 15px 50px
+	text-align: center
+	+r(650)
+		padding: 15px 20px
+	&.mod_round
+		text-align: left
+		display: flex
+		align-items: center
+		.example__pic
+			margin-right: 30px
+			position: relative
+			width: 168px
+			height: 168px
+			margin-bottom: 0
+			+r(650)
+				margin: 0 auto 30px
+		.example__img
+			+vcenter
+			width: 100%
+	&.mod_flex
+		text-align: left
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+r(650)
+			display: block
+			text-align: center
+
+	&__pic
+		text-align: center
+		margin-bottom: 30px
+	&__img
+		max-width: 100%
+	&__title
+		text-transform: uppercase
+		font-size: 14px
+		+ll
+
+
+.list
+	padding: 0 0 0 40px
+	font-size: 0
+	&__item
+		position: relative
+		font-size: 16px
+		line-height: 1.5
+		+ll
+		&:before
+			content: ''
+			position: absolute
+			top: .7em
+			left: -20px
+			display: inline-block
+			vertical-align: top
+			width: 4px
+			height: 4px
+			background-color: #333333
+			border-radius: 100%
+
+.warning
+	display: flex
+	+r(780)
+		display: block
+	&__container
+		display: flex
+		min-height: 164px
+		height: auto
+		min-width: 90px
+		width: 90px
+		align-items: center
+		justify-content: center
+		background-color: #FFB71D
+		+r(780)
+			display: block
+			width: 100%
+			height: 90px
+			min-height: 90px
+			text-align: center
+			padding-top: 10px
+	&__pic
+		position: relative
+		display: inline-block
+		width: 64px
+		height: 64px
+		border-radius: 100%
+		background-color: #997B3A
+	&__img
+		+vcenter
+	&__content
+		display: flex
+		align-items: center
+		background-color: #fff
+		padding: 60px 20px 60px 48px
+		+r(780)
+			padding: 30px 15px
+
+
+.picturelist
+	display: flex
+	+r(650)
+		display: block
+	&__pic
+		width: 80px
+		min-width: 80px
+		margin-right: 20px
+		+r(650)
+			width: 100%
+			text-align: center
+			margin-bottom: 15px
+		&.size-01
+			.picturelist__img
+				width: 50px
+	&__img
+		fill: #525CA3
+		+r(650)
+			width: 80px
+
+.numeric
+	font-size: 0
+	padding: 0
+	margin: 0
+	counter-reset: my-badass-counter
+	&__item
+		position: relative
+		font-size: 16px
+		line-height: 1.5
+		color: #333
+		text-indent: 20px
+		+ll
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: -20px
+			content: counter(my-badass-counter )')'
+			counter-increment: my-badass-counter
+
+
+.literature
+	&__title
+		font-size: 20px
+		line-height: 1.2
+		margin-bottom: 1em
+		+lm
+	&__list
+		font-size: 0
+		counter-reset: my-badass-counter
+	&__item
+		position: relative
+		font-size: 14px
+		line-height: 1.7
+		+lr
+		font-style: italic
+		text-indent: 40px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: -36px
+			content: counter(my-badass-counter )'.'
+			counter-increment: my-badass-counter
+
+
+
+
+
+.is-shadow
+	box-shadow: 0px 0px 4px 0px rgba(186, 186, 186, 0.75);
