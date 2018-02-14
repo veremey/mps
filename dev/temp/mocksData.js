@@ -30,6 +30,9 @@ __pages: [{
                 name: '2',
                 href: '2.html'
              },{
+                name: '3',
+                href: '3.html'
+             },{
                 name: '4',
                 href: '4.html'
              },{
